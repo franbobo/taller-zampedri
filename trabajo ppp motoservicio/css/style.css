@@ -1,0 +1,282 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.encabezado {
+    height: 70px;
+    background-color: #800020;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.logo img {
+    margin-left: 20px;
+    width: 55px;
+    border-radius: 10px;
+}
+
+.titulo {
+    flex: 1;
+}
+
+.titulo h1 {
+    font-size: 25px;
+    margin-left: 15px;
+    margin-bottom: 0;
+}
+
+.titulo h2 {
+    font-size: 12px;
+    margin-left: 25px;
+    margin-bottom: 0;
+}
+
+.botones {
+    display: flex;
+    gap: 10px;
+    margin-right: 20px;
+}
+
+.botones a {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    padding: 8px 18px;
+    font-size: 12px;
+}
+
+.titulo2 {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+#carrusel {
+    width: 100%;
+    height: 350px;
+    background-color: #c9d2da;
+}
+
+#carrusel .carousel-inner,
+#carrusel .carousel-item {
+    height: 350px;
+}
+
+#carrusel img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.servicios {
+    padding: 20px;
+    background-color: white;
+}
+
+.servicios h2 {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.lista-servicios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    max-width: 850px;
+    margin: auto;
+}
+
+.servicio {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+}
+
+.servicio span {
+    min-width: 20px;
+    height: 20px;
+    background-color: #b00000;
+    border-radius: 50%;
+}
+
+.servicio p {
+    font-size: 13px;
+    margin: 0;
+}
+
+.marcas {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.marcas p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.productos {
+    background-color: white;
+    padding: 15px;
+}
+
+.productos h2 {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.lista-productos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.producto {
+    width: 120px;
+    background-color: #c9d2da;
+    text-align: center;
+}
+
+.producto img {
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+}
+
+.precio {
+    background-color: #b00000;
+    color: white;
+    padding: 5px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #800020;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+footer p {
+    margin: 0;
+}
+
+.contacto {
+    background-color: black;
+    color: white;
+    display: flex;
+    padding: 20px 8%;
+    gap: 30px;
+    align-items: center;
+}
+
+.informacion {
+    width: 50%;
+}
+
+.informacion h2 {
+    font-size: 22px;
+}
+
+.informacion p {
+    font-size: 12px;
+}
+
+.informacion small {
+    display: block;
+    font-size: 9px;
+    margin-top: 8px;
+}
+
+.formulario {
+    width: 50%;
+    background-color: #555;
+    padding: 10px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.formulario input,
+.formulario textarea {
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 10px;
+    font-size: 13px;
+    outline: none;
+}
+
+.formulario textarea {
+    height: 35px;
+    resize: none;
+}
+
+.formulario button {
+    background-color: #b00000;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 3px;
+    font-weight: bold;
+}
+
+.formulario button:hover {
+    background-color: #800020;
+}
+
+@media (max-width: 650px) {
+
+    .encabezado {
+        height: auto;
+        padding: 10px;
+        flex-wrap: wrap;
+    }
+
+    .titulo h1 {
+        font-size: 20px;
+    }
+
+    .botones {
+        width: 100%;
+        justify-content: center;
+        margin: 10px 0;
+        flex-wrap: wrap;
+    }
+
+    #carrusel,
+    #carrusel .carousel-inner,
+    #carrusel .carousel-item,
+    #carrusel img {
+        height: 230px;
+    }
+
+    .lista-servicios {
+        grid-template-columns: 1fr;
+    }
+
+    .contacto {
+    flex-direction: column;
+    padding: 25px;
+    }  
+
+    .informacion,
+    .formulario {
+    width: 100%;
+}
+}

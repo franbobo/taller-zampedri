@@ -44,7 +44,7 @@ body {
 }
 
 .botones a {
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     color: white;
     text-decoration: none;
     border-radius: 8px;
@@ -53,7 +53,7 @@ body {
 }
 
 .titulo2 {
-    background-color: black;
+    background-color: rgb(0, 11, 59);
     color: white;
     text-align: center;
     padding: 10px;
@@ -61,19 +61,14 @@ body {
 
 #carrusel {
     width: 100%;
-    height: 350px;
-    background-color: #c9d2da;
-}
-
-#carrusel .carousel-inner,
-#carrusel .carousel-item {
-    height: 350px;
+    height: 400px;
+    background-color: rgb(0, 11, 59);
 }
 
 #carrusel img {
     width: 100%;
-    height: 350px;
-    object-fit: cover;
+    height: 400px;
+    object-fit: contain;
 }
 
 .servicios {
@@ -128,7 +123,7 @@ body {
 
 .productos {
     background-color: white;
-    padding: 15px;
+    padding: 20px;
 }
 
 .productos h2 {
@@ -141,19 +136,42 @@ body {
     display: flex;
     justify-content: center;
     gap: 20px;
-    flex-wrap: wrap;
+    padding: 20px 60px;
 }
 
-.producto {
-    width: 120px;
+.producto-card {
+    width: 30%;
+    min-height: 160px;
     background-color: #c9d2da;
     text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.producto img {
-    width: 100%;
-    height: 110px;
-    object-fit: cover;
+.producto-card h3 {
+    font-size: 16px;
+}
+
+.producto-card p {
+    background-color: #b00000;
+    color: white;
+    padding: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+}
+
+#carruselProductos .carousel-control-prev,
+#carruselProductos .carousel-control-next {
+    background-color: #800020;
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
 }
 
 .precio {
@@ -268,6 +286,16 @@ footer p {
 
     .lista-servicios {
         grid-template-columns: 1fr;
+    }
+
+    .lista-productos {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    }
+
+    .producto-card {
+    width: 90%;
     }
 
     .contacto {
